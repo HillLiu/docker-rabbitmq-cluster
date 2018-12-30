@@ -1,8 +1,5 @@
 # Cluster RabbitMQ :rabbit:
-
-There are a lots of good options if you want to run a [RabbitMQ](https://hub.docker.com/_/rabbitmq/) cluster in [docker](http://docker.com/). Here's an solution that only rely on [docker official images](https://hub.docker.com/_/rabbitmq/) :tada:
-
-The main benifit with this approach is that you can use [any version](https://hub.docker.com/r/library/rabbitmq/tags/) of RabbitMQ, which is maintaied by docker and will be up-to-date with future releases.
+   * [RabbitMQ](https://hub.docker.com/_/rabbitmq/) 
 
 ## Install
 
@@ -28,6 +25,5 @@ This `docker-compose.yml` file comes with the latest version of [HA Proxy](http:
 
 It should be fairly easy to add a [`port mapping`](https://docs.docker.com/compose/compose-file/#ports) for the individual containers if it is desired to connect to a specific broker node.
 
-## Read more
-
-I wrote [a blog post](http://fellowdeveloper.se/2017/05/24/cluster-rabbitmq-in-docker/) that explains some of the ideas behind this repo.
+## Origin github
+* https://github.com/pardahlman/docker-rabbitmq-cluster
