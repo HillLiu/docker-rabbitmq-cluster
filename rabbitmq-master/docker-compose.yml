@@ -5,6 +5,7 @@ services:
 
   rabbitmq1:
     image: rabbitmq:3-management
+    restart: always
     hostname: rabbitmq1
     environment:
       - RABBITMQ_ERLANG_COOKIE=${RABBITMQ_ERLANG_COOKIE}
@@ -20,6 +21,7 @@ services:
 
   haproxy:
     image: haproxy:1.7
+    restart: always
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     depends_on:
