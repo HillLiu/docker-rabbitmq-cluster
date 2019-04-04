@@ -12,8 +12,6 @@ services:
       - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
       - RABBITMQ_DEFAULT_VHOST=${RABBITMQ_DEFAULT_VHOST}
-    extra_hosts:
-      - "rabbitmq2:${RABBITMQ_CLIENT}"
     ports:
       - "4369:4369"
       - "1883:1883"
@@ -31,4 +29,4 @@ services:
       - 5672:5672
       - 1936:1936
     extra_hosts:
-      - "rabbitmq2:${RABBITMQ_CLIENT}"
+      - "rabbitmq2:${RABBITMQ_MEMBER}"
