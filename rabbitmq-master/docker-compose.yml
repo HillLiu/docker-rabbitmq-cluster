@@ -4,7 +4,7 @@ version: '3'
 services:
 
   rabbitmq1:
-    image: rabbitmq:3-management
+    image: rabbitmq:management-alpine
     restart: always
     hostname: rabbitmq1
     environment:
@@ -18,7 +18,7 @@ services:
       - "25672:25672"
 
   haproxy:
-    image: haproxy:1.7
+    image: haproxy:alpine
     restart: always
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
