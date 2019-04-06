@@ -3,7 +3,7 @@ version: '3'
 services:
 
   rabbitmq2:
-    image: rabbitmq:management-alpin
+    image: rabbitmq:management-alpine
     restart: always
     hostname: rabbitmq2
     environment:
