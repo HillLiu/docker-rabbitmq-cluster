@@ -1,8 +1,7 @@
-version: '3'
-
+version: "2.4"
 services:
-
   rabbitmq2:
+    cpus: ${CPUS} 
     image: rabbitmq:management-alpine
     restart: always
     hostname: rabbitmq2
