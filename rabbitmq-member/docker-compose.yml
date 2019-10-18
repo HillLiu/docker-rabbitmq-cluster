@@ -1,10 +1,10 @@
 version: "2.4"
 services:
-  rabbitmq2:
+  rabbitmqMember:
     cpus: ${CPUS} 
     image: rabbitmq:management-alpine
     restart: always
-    hostname: rabbitmq2
+    hostname: ${RABBITMQ_HOSTNAME}
     environment:
       - RABBITMQ_ERLANG_COOKIE=${RABBITMQ_ERLANG_COOKIE}
     volumes:
@@ -12,7 +12,7 @@ services:
       - ./cluster-entrypoint.sh:/usr/local/bin/cluster-entrypoint.sh
     entrypoint: /usr/local/bin/cluster-entrypoint.sh
     extra_hosts:
-          - "rabbitmq1:${RABBITMQ_SERVER}"
+          - "rabbitmq1:${RABBITMQ_MASTER}"
     ports:
       - "5672:5672"
       - "15672:15672"
