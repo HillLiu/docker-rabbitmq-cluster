@@ -11,6 +11,10 @@ services:
       - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
       - RABBITMQ_DEFAULT_VHOST=${RABBITMQ_DEFAULT_VHOST}
+    ports:
+      - "4369:4369"
+      - "1883:1883"
+      - "25672:25672"
 
   rabbitmq2:
     image: rabbitmq:management-alpine
